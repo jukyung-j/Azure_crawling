@@ -2,11 +2,54 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    <br>
-
-   
-
-</div>
+<!DOCTYPE html>
+ 
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <title>Line Chart</title>
+</head>
+<body>
+    <div id="chartContainer"></div>
+ 
+    <script type="text/javascript">
+        window.onload = function () {
+            var chart = new CanvasJS.Chart("chartContainer", {
+                theme: "light2",
+                zoomEnabled: true,
+                animationEnabled: true,
+                title: {
+                    text: "Line Chart in ASP.Net MVC using CanvasJS"
+                },
+                subtitles: [
+                    {
+                        text: "Try Resizing the Browser"
+                    }
+                ],
+                data: [
+                {
+                    type: "line",
+                    dataPoints: [
+                        { x: 10, y: 71 },
+                        { x: 20, y: 55 },
+                        { x: 30, y: 50 },
+                        { x: 40, y: 65 },
+                        { x: 50, y: 95 },
+                        { x: 60, y: 68 },
+                        { x: 70, y: 28 },
+                        { x: 80, y: 34 },
+                        { x: 90, y: 14 },
+                        { x: 100, y: 33 },
+                        { x: 110, y: 42 },
+                        { x: 120, y: 62 },
+                    ],
+                }
+                ]
+            });
+            chart.render();
+        };
+    </script>
+ 
+</body>
+</html>			
