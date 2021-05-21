@@ -31,7 +31,7 @@ namespace crawling.Controllers
         {  
             TableStorage.Retrieve();
             ViewBag.DataPoints = JsonConvert.SerializeObject(TableStorage.dataPoints);
-
+            TableStorage.dataPoints.Clear();    // list 초기화
             return View();
         }
          

@@ -45,7 +45,7 @@ namespace crawling.Controllers
         static public List<DataPoint> dataPoints = new List<DataPoint>();
        public static async void Retrieve(){    // table 값 가져오기
             // table storage access key
-            string storageConnection = "*";
+            string storageConnection = "Access Key";
             CloudStorageAccount storageAccount = CloudStorageAccount.Parse(storageConnection);
             CloudTableClient tableClient = storageAccount.CreateCloudTableClient();
 
